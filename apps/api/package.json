@@ -2,9 +2,9 @@
   "name": "remitx-api",
   "version": "1.0.0",
   "scripts": {
-    "start:dev": "nest start --watch",
-    "start": "node dist/main",
-    "build": "nest build",
+    "start:dev": "node init && nest start --watch",
+    "start": "node init && node dist/main",
+    "build": "node init && nest build",
     "test": "jest --passWithNoTests",
     "prisma:migrate": "prisma migrate dev",
     "prisma:generate": "prisma generate"
@@ -12,8 +12,14 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node",
-    "testMatch": ["**/*.spec.ts"],
-    "moduleFileExtensions": ["ts", "js", "json"]
+    "testMatch": [
+      "**/*.spec.ts"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ]
   },
   "dependencies": {
     "@nestjs/bull": "^10.0.1",
